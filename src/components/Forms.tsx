@@ -25,9 +25,9 @@ export default function Forms() {
 
   return (
     <>
-      <form>
-        <input value={form} onChange={(e) => setForm(e.target.value)} type="text" className="border-black border p-2" />
-        <button onClick={handleClick} className="border-black border p-2">Enviar</button>
+      <form >
+        <input value={form} onChange={(e) => setForm(e.target.value)} type="text" />
+        <button onClick={handleClick}>Enviar</button>
       </form>
       <div>
         <Card location={location} current={current} forecast={forecast} />
