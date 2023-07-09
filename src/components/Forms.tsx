@@ -1,5 +1,6 @@
 'use client'
 import { dataProps } from "@/types"
+import { PiMagnifyingGlass } from 'react-icons/pi'
 import getData from "@/utils/api"
 import { useState } from "react"
 import Card from "./Card"
@@ -25,12 +26,12 @@ export default function Forms() {
 
   return (
     <>
-      <form >
-        <input value={form} onChange={(e) => setForm(e.target.value)} type="text" />
-        <button onClick={handleClick}>Enviar</button>
+      <form className="flex gap-2">
+        <input className="bg-transparent border-white border rounded-lg h-7 text-white" value={form} onChange={(e) => setForm(e.target.value)} type="text" />
+        <button onClick={handleClick}><PiMagnifyingGlass className="text-white" size={20} /></button>
       </form>
       <div>
-        <Card location={location} current={current} forecast={forecast} />
+        {/* <Card location={location} current={current} forecast={forecast} /> */}
       </div>
     </>
   )
