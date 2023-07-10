@@ -1,12 +1,12 @@
 import { dataProps } from "@/types";
 
-export default function Card({ location, current, forecast }: dataProps) {
+export default function Card({data}: dataProps) {
   return (
     <div>
-      {location.name}
-      {location.region}
-      {location.country}
-      {current.temp_c}
+      {data.location.name}
+      {data.location.region}
+      {data.location.country}
+      {data.current.temp_c}
     </div>
   )
 }
