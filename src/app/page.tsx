@@ -16,7 +16,6 @@ export default async function Home({ searchParams }) {
       <h1>Insira sua cidade</h1>
     )
   } else {
-    console.log('aii')
     return (
       <Card data={data} />
     )
