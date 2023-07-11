@@ -4,15 +4,21 @@ import { dataProps } from "@/types";
 import getData from "@/utils/api";
 import { useState } from "react";
 
-export default async function Home({searchParams}) {
+export default async function Home({ searchParams }) {
   const cidade = searchParams.city
   console.log(cidade)
 
   const data: dataProps = await getData(cidade)
+  console.log(data)
 
-  return (
-    <main>
-      <Card data={data}/>
-    </main>
-  )
+  if (!cidade) {
+    return (
+      <h1>Insira sua cidade</h1>
+    )
+  } else {
+    console.log('aii')
+    return (
+      <Card data={data} />
+    )
+  }
 }

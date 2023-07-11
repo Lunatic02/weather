@@ -224,9 +224,9 @@ export interface dataProps {
             }
           }
         }
-  
+
       }
-  
+
     }
   }
 }
