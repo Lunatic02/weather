@@ -14,19 +14,18 @@ export default async function Home({ searchParams }) {
   if (cidade) {
     Content = <Card data={data} />
   } else {
-    Content = <Card data={ipData} />
-  }
 
-  return (
-    <main className="container h-screen flex justify-center items-center">
-      <div className="h-fit flex">
-        <div className="bg-gray-50 rounded-l-2xl p-4">
-          <Forms />
-          {Content}
+    return (
+      <main className="container h-screen flex justify-center items-center">
+        <div className="h-fit flex">
+          <div className="bg-gray-50 rounded-l-2xl p-4">
+            <Forms />
+            {Content}
+          </div>
+          <div className="bg-gray-200 p-4">
+          </div>
         </div>
-        <div className="bg-gray-200 p-4">
-        </div>
-      </div>
-    </main>
-  )
+      </main>
+    )
+  }
 }
