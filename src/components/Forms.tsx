@@ -19,6 +19,7 @@ export default function Forms() {
     };
 
     updateSearchParams(form.toLowerCase())
+    setForm('')
   }
 
   const updateSearchParams = (form: string,) => {
