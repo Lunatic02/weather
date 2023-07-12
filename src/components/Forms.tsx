@@ -8,44 +8,40 @@ import { useRouter } from "next/navigation"
 
 export default function Forms() {
   const [form, setForm] = useState('')
-  
+
   const router = useRouter()
 
-  const handleClick = (e: React.FormEvent<HTMLFormElement>)=>{
+  const handleClick = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if(form === ''){
+    if (form === '') {
       return alert('Please fill in the search bar')
     };
 
     updateSearchParams(form.toLowerCase())
   }
-  
-  const updateSearchParams = (form:string,)=>{
+
+  const updateSearchParams = (form: string,) => {
     const searchParams = new URLSearchParams(window.location.search);
 
-    if(form){
+    if (form) {
       searchParams.set('city', form)
-    } else{
+    } else {
       searchParams.delete('city')
     }
 
 
-    const newPathname=`${window.location.pathname}?${searchParams.toString()}`
+    const newPathname = `${window.location.pathname}?${searchParams.toString()}`
 
     router.push(newPathname)
   }
 
-
-  
-
-
-
   return (
     <>
       <form className="flex gap-2">
-        <input className="bg-transparent border-white border rounded-lg h-7 text-white" value={form} onChange={(e) => setForm(e.target.value)} type="text" />
-        <button onClick={handleClick}><PiMagnifyingGlass className="text-white" size={20} /></button>
+        <input
+          className="bg-transparent border-transparent rounded-lg  h-7 text-black placeholder:text-black focus:outline outline-1 hover:border-b-black border transition-all select" value={form} placeholder="Search for places ..." onChange={(e) => setForm(e.target.value)} type="text" />
+        <button onClick={handleClick}><PiMagnifyingGlass className="text-black" size={20} /></button>
       </form>
     </>
   )
