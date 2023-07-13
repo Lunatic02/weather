@@ -1,9 +1,6 @@
 'use client'
-import { dataProps } from "@/types"
 import { PiMagnifyingGlass } from 'react-icons/pi'
-import getData from "@/utils/api"
 import { useState } from "react"
-import Card from "./Card"
 import { useRouter } from "next/navigation"
 
 export default function Forms() {
@@ -17,7 +14,6 @@ export default function Forms() {
     if (form === '') {
       return alert('Please fill in the search bar')
     };
-
     updateSearchParams(form.toLowerCase())
     setForm('')
   }

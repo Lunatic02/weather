@@ -11,7 +11,15 @@ export default async function Home({ searchParams }) {
   let Content
   if (data) {
     Content = <Card data={data} />
-  } else {
+  }else{
+    Content= (
+      <div>
+        <p className="text-red-500 transition-all">City: {cidade} - Not Found</p>
+        <Card data={ipData} />
+      </div>
+    )
+  }
+  if(!cidade){
     Content = <Card data={ipData} />
   }
 
