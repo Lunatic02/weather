@@ -25,12 +25,13 @@ export default async function Home({ searchParams }) {
 
   return (
     <main className="container h-screen flex justify-center items-center">
-      <div className="h-fit flex shadow-2xl">
+      <div className="h-fit shadow-2xl md:flex sm:block">
         <div className="bg-gray-50 rounded-l-2xl p-10">
           <Forms />
           {Content}
         </div>
         <div className="bg-gray-200 p-4">
+          oi
         </div>
       </div>
     </main>
