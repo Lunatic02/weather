@@ -1,11 +1,19 @@
-import { data } from "autoprefixer";
 import axios from "axios";
 
 export default async function getData(city: string) {
-  const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=efdb7a1b6ed34f2e872131926230907&q=${city}`)
-  const result = await response.json()
-
-  return result
+  let result
+  try {
+    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=efdb7a1b6ed34f2e872131926230907&q=${city}`);
+    if (!response.ok) {
+      throw new Error('Erro na requisição.');
+    }
+    result = await response.json();
+    return result;
+  } catch (error) {
+    console.error(error);
+    result = null
+    return result
+  }
 }
 
 export const getDatabyIp = async (ip: string) => {
