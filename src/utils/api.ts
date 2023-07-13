@@ -37,10 +37,22 @@ export const getWeekDay = async (dias: string) => {
 }
 
 export const getHours = async (horasParam: string) => {
-  var dataString = horasParam;
-  var partes = dataString.split(' ');
-  var hora = partes[1];
+  const dataString = horasParam;
+  const partes = dataString.split(' ');
+  const hora = partes[1];
   const [horas, minutos] = hora.split(':');
-  var formatoHora = horas + ":" + minutos;
+  const formatoHora = horas + ":" + minutos;
   return formatoHora
 }
+export const searchImages = async (term) => {
+  const response = await axios.get('https://api.unsplash.com/search/photos', {
+    headers: {
+       Authorization: 'Client-ID UfxW1i_m9W0bdS_kiTCrVtmlebku9p3CsSVqkKlrAXo',
+    },
+    params: {
+      query: term,
+    },
+  });
+
+  return response.data.results;
+};
