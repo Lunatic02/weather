@@ -2,8 +2,6 @@ import Card from "@/components/Card";
 import Forms from "@/components/Forms";
 import { dataProps } from "@/types";
 import getData, { getDatabyIp, getIp } from "@/utils/api";
-import { data } from "autoprefixer";
-
 export default async function Home({ searchParams }) {
   const cidade = searchParams.city
   const data: dataProps = await getData(cidade)
@@ -11,7 +9,7 @@ export default async function Home({ searchParams }) {
   const ipData: dataProps['data'] = await getDatabyIp(ip)
 
   let Content
-  if (cidade) {
+  if (data) {
     Content = <Card data={data} />
   } else {
     Content = <Card data={ipData} />
