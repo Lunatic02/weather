@@ -44,15 +44,3 @@ export const getHours = async (horasParam: string) => {
   const formatoHora = horas + ":" + minutos;
   return formatoHora
 }
-export const searchImages = async (term) => {
-  const response = await axios.get('https://api.unsplash.com/search/photos', {
-    headers: {
-       Authorization: 'Client-ID UfxW1i_m9W0bdS_kiTCrVtmlebku9p3CsSVqkKlrAXo',
-    },
-    params: {
-      query: term,
-    },
-  });
-
-  return response.data.results;
-};
