@@ -3,7 +3,7 @@ import { getHours, getWeekDay } from "@/utils/api";
 import Image from 'next/image'
 
 export default async function Card({ data }: dataProps) {
-
+  console.log(data.current.air_quality.us_epa_index)
   const nomeDiaDaSemana = await getWeekDay(data.location.localtime)
   const horas = await getHours(data.location.localtime)
 
@@ -38,10 +38,14 @@ export default async function Card({ data }: dataProps) {
           {data.current.condition.text}
           </div>
           <div>
-          <Image  src={`https://${data.current.condition.icon}`} width={30} height={30}/>
+          <Image  src={`https://${data.current.condition.icon}`} width={30} height={30} alt={data.current.condition.icon}/>
           </div>
         </div>
+        <div className="flex flex-wrap items-end gap-2">
         <p className="text-3xl">{`${data.location.name}`}</p>
+        -
+        <p className="text-1xl">{`${data.location.country}`}</p>
+        </div>
       </div>
     </div >
   )

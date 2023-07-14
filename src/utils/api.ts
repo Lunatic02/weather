@@ -3,7 +3,7 @@ import axios from "axios";
 export default async function getData(city: string) {
   let result
   try {
-    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=efdb7a1b6ed34f2e872131926230907&q=${city}`);
+    const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=efdb7a1b6ed34f2e872131926230907&q=${city}&aqi=yes`);
     if (!response.ok) {
       throw new Error('Erro na requisição.');
     }
@@ -17,7 +17,7 @@ export default async function getData(city: string) {
 }
 
 export const getDatabyIp = async (ip: string) => {
-  const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=efdb7a1b6ed34f2e872131926230907&q=${ip}`)
+  const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=efdb7a1b6ed34f2e872131926230907&q=${ip}&aqi=yes`)
   const result = await response.json()
 
   return result
