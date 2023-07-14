@@ -9,6 +9,11 @@ export interface dataProps {
     current: {
       temp_c: number
       is_day: boolean
+      uv: number
+      wind_dir: string
+      wind_kph: number
+      humidity: number, 
+      vis_km: number
       condition: {
         text: string
         icon: string
@@ -17,10 +22,18 @@ export interface dataProps {
         precip_mm: number,
         cloud: number
       }
+      air_quality: {
+        us_epa_index: number,
+      }
     }
     forecast: {
       forecastday: {
+        
         0: {
+          astro: {
+            sunrise: number
+            sunset: number
+          },
           day: {
             maxtemp_c: number,
             mintemp_c: number,
