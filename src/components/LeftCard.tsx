@@ -21,7 +21,7 @@ export default function LeftCard({ data }: dataProps) {
   }
 
   return (
-    <main>
+    <main className="md:px-0">
       <h1 className="font-bold">
         Today{`'`}s Forecast
       </h1>
@@ -40,7 +40,7 @@ export default function LeftCard({ data }: dataProps) {
       </section>
       <h1 className="font-bold mt-3">Today{`'`}s Highlights</h1>
       <section className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl flex gap-10 flex-wrap">
-        <div className="bg-gray-50 w-40 h-28 rounded-xl p-3">
+        <div className="bg-gray-50 md:w-40 w-32 h-28 rounded-xl p-3">
           <h1 className="text-gray-300">
             UV index
           </h1>
@@ -48,7 +48,7 @@ export default function LeftCard({ data }: dataProps) {
             {uvContent}
           </div>
         </div>
-        <div className="bg-gray-50 w-40 h-28 rounded-xl p-3">
+        <div className="bg-gray-50 md:w-40 w-32 h-28 rounded-xl p-3">
           <h1 className="text-gray-300">
             Wind Status
           </h1>
@@ -59,7 +59,7 @@ export default function LeftCard({ data }: dataProps) {
             </p>
           </div>
         </div>
-        <div className="bg-gray-50 w-40 h-28 rounded-xl p-3">
+        <div className="bg-gray-50 md:w-40 w-32 h-28 rounded-xl p-3">
           <h1 className="text-gray-300">
             Sunrise & Sunset
           </h1>
@@ -72,7 +72,7 @@ export default function LeftCard({ data }: dataProps) {
             </div>
           </div>
         </div>
-        <div className="bg-gray-50 w-40 h-28 rounded-xl p-3">
+        <div className="bg-gray-50 md:w-40 w-32 h-28 rounded-xl p-3">
           <h1 className="text-gray-300">
             UV index
           </h1>
@@ -80,7 +80,7 @@ export default function LeftCard({ data }: dataProps) {
             {uvContent}
           </div>
         </div>
-        <div className="bg-gray-50 w-40 h-28 rounded-xl p-3">
+        <div className="bg-gray-50 md:w-40 w-32 h-28 rounded-xl p-3">
           <h1 className="text-gray-300">
             UV index
           </h1>
@@ -88,13 +88,13 @@ export default function LeftCard({ data }: dataProps) {
             {uvContent}
           </div>
         </div>
-        <div className="bg-gray-50 w-40 h-28 rounded-xl p-3">
+        <div className="bg-gray-50 md:w-40 w-32 h-28 rounded-xl p-3">
           <h1 className="text-gray-300">
             UV index
           </h1>
-          <div className="flex justify-center h-full text-xl font-bold">
+          <p className="flex justify-center h-full text-xl font-bold">
             {uvContent}
-          </div>
+          </p>
         </div>
       </section>
     </main>

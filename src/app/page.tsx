@@ -33,13 +33,16 @@ export default async function Home({ searchParams }: any) {
   }
 
   return (
-    <main className="container h-screen flex justify-center items-center mx-auto">
-      <div className="h-fit shadow-2xl md:flex sm:block">
-        <div className="bg-gray-50 rounded-l-2xl p-10 mt-48 sm:mt-0">
+    <main className="container mx-auto px-4 md:px-8 md:flex items-center justify-center min-h-screen">
+      <div className="md:flex bg-gray-50 rounded-xl shadow-2xl">
+        {/* Left Column */}
+        <div className="bg-gray-50 md:flex-1 p-6">
           <Forms />
           {Content}
         </div>
-        <div className="bg-gray-200 rounded-r-2xl p-10">
+
+        {/* Right Column */}
+        <div className="bg-gray-200 p-6">
           {LeftContent}
         </div>
       </div>
