@@ -5,19 +5,19 @@ export default function LeftCard({ data }: dataProps) {
   const uvIndex: number = data.current.uv;
   let uvContent
   if (uvIndex <= 2) {
-    uvContent = <p className="text-center text-green-500">{data.current.uv} <p>Low</p> </p>
+    uvContent = <div className="text-center text-green-500">{data.current.uv} <p>Low</p> </div>
   }
   else if (uvIndex <= 5) {
-    uvContent = <p className="text-center text-yellow-500">{data.current.uv} <p>Moderate</p> </p>
+    uvContent = <div className="text-center text-yellow-500">{data.current.uv} <p>Moderate</p> </div>
   }
   else if (uvIndex <= 7) {
-    uvContent = <p className="text-center text-orange-500">{data.current.uv} <p>High</p> </p>
+    uvContent = <div className="text-center text-orange-500">{data.current.uv} <p>High</p> </div>
   }
   else if (uvIndex <= 10) {
-    uvContent = <p className="text-center text-red-500">{data.current.uv} <p>Very High</p> </p>
+    uvContent = <div className="text-center text-red-500">{data.current.uv} <p>Very High</p> </div>
   }
   else {
-    uvContent = <p className="text-center text-orange-500">{data.current.uv} <p>High</p> </p>
+    uvContent = <div className="text-center text-orange-500">{data.current.uv} <p>High</p> </div>
   }
 
   return (
@@ -39,30 +39,63 @@ export default function LeftCard({ data }: dataProps) {
         </div>
       </section>
       <h1 className="font-bold mt-3">Today{`'`}s Highlights</h1>
-      <section className="flex gap-5 flex-wrap">
-        <div className="bg-gray-50 w-36 h-28 rounded-xl p-3">
+      <section className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl flex gap-10 flex-wrap">
+        <div className="bg-gray-50 w-40 h-28 rounded-xl p-3">
           <h1 className="text-gray-300">
             UV index
           </h1>
-          <p className="flex justify-center h-full text-xl font-bold">
+          <div className="flex justify-center h-full text-xl font-bold">
             {uvContent}
-          </p>
-        </div><div className="bg-gray-50 w-36 h-28 rounded-xl p-3">
-          <h1 className="text-gray-300">
-            UV index
-          </h1>
-          <p className="flex justify-center h-full text-xl font-bold">
-            {uvContent}
-          </p>
-        </div><div className="bg-gray-50 w-36 h-28 rounded-xl p-3">
-          <h1 className="text-gray-300">
-            UV index
-          </h1>
-          <p className="flex justify-center h-full text-xl font-bold">
-            {uvContent}
-          </p>
+          </div>
         </div>
-
+        <div className="bg-gray-50 w-40 h-28 rounded-xl p-3">
+          <h1 className="text-gray-300">
+            Wind Status
+          </h1>
+          <div className="m-auto text-center h-full text-xl font-bold">
+            <p>{data.current.wind_kph}</p>
+            <p>
+              {data.current.wind_dir}
+            </p>
+          </div>
+        </div>
+        <div className="bg-gray-50 w-40 h-28 rounded-xl p-3">
+          <h1 className="text-gray-300">
+            Sunrise & Sunset
+          </h1>
+          <div className="m-auto text-center  h-full text-md font-bold">
+            <div>
+              {data.forecast.forecastday[0].astro.sunrise}
+            </div>
+            <div>
+              {data.forecast.forecastday[0].astro.sunset}
+            </div>
+          </div>
+        </div>
+        <div className="bg-gray-50 w-40 h-28 rounded-xl p-3">
+          <h1 className="text-gray-300">
+            UV index
+          </h1>
+          <div className="flex justify-center h-full text-xl font-bold">
+            {uvContent}
+          </div>
+        </div>
+        <div className="bg-gray-50 w-40 h-28 rounded-xl p-3">
+          <h1 className="text-gray-300">
+            UV index
+          </h1>
+          <div className="flex justify-center h-full text-xl font-bold">
+            {uvContent}
+          </div>
+        </div>
+        <div className="bg-gray-50 w-40 h-28 rounded-xl p-3">
+          <h1 className="text-gray-300">
+            UV index
+          </h1>
+          <div className="flex justify-center h-full text-xl font-bold">
+            {uvContent}
+          </div>
+        </div>
       </section>
     </main>
   )

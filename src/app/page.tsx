@@ -13,29 +13,29 @@ export default async function Home({ searchParams }: any) {
   let LeftContent
   if (data) {
     Content = <Card data={data} />
-    LeftContent = <LeftCard data={data}/>
-  }else{
-    Content= (
+    LeftContent = <LeftCard data={data} />
+  } else {
+    Content = (
       <div>
         <p className="text-red-500 transition-all">City: {cidade} - Not Found</p>
         <Card data={ipData} />
       </div>
     )
     LeftContent = (
-      <LeftCard data={ipData}/>
+      <LeftCard data={ipData} />
     )
   }
-  if(!cidade){
+  if (!cidade) {
     Content = <Card data={ipData} />
     LeftContent = (
-      <LeftCard data={ipData}/>
+      <LeftCard data={ipData} />
     )
   }
 
   return (
     <main className="container h-screen flex justify-center items-center mx-auto">
       <div className="h-fit shadow-2xl md:flex sm:block">
-        <div className="bg-gray-50 rounded-l-2xl p-10">
+        <div className="bg-gray-50 rounded-l-2xl p-10 mt-48 sm:mt-0">
           <Forms />
           {Content}
         </div>

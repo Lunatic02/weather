@@ -37,7 +37,7 @@ export default function Forms() {
     <>
       <form className="flex gap-2">
         <input
-          className="bg-transparent border-transparent rounded-lg  h-7 text-black placeholder:text-black focus:outline outline-1 hover:border-b-black border transition-all select" value={form} placeholder="Search for places ..." onChange={(e) => setForm(e.target.value)} type="text" />
+          className=" bg-transparent border-transparent rounded-lg  h-7 text-black placeholder:text-black focus:outline outline-1 hover:border-b-black border transition-all select" value={form} placeholder="Search for places ..." onChange={(e) => setForm(e.target.value)} type="text" />
         <button onClick={handleClick}><PiMagnifyingGlass className="text-black" size={20} /></button>
       </form>
     </>
