@@ -12,7 +12,7 @@ export interface dataProps {
       uv: number
       wind_dir: string
       wind_kph: number
-      humidity: number, 
+      humidity: number,
       vis_km: number
       condition: {
         text: string
@@ -23,12 +23,12 @@ export interface dataProps {
         cloud: number
       }
       air_quality: {
-        us_epa_index: number,
+        'us-epa-index': number,
       }
     }
     forecast: {
       forecastday: {
-        
+
         0: {
           astro: {
             sunrise: number
@@ -43,6 +43,7 @@ export interface dataProps {
             }
           }
           hour: {
+            map: any
             0: {
               temp_c: number,
               is_day: boolean,
