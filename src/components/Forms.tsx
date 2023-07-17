@@ -8,7 +8,7 @@ export default function Forms() {
 
   const router = useRouter()
 
-  const handleClick = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
     if (form === '') {

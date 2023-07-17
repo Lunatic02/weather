@@ -7,6 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: `ClimateSense`,
   description: 'An weather service, search any city you want.',
+  
 }
 
 export default function RootLayout({
