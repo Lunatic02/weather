@@ -59,7 +59,7 @@ export default function LeftCard({ data }: dataProps) {
       <h1 className="font-bold flex justify-center md:block">
         Today{`'`}s Forecast
       </h1>
-      <section className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl overflow-x-scroll scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 ">
+      <section className="max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl overflow-x-scroll scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-gray-100 scrollable-section">
         <div className="flex  items-end gap-2  mb-3">
           {data.forecast.forecastday[0].hour.map((hourData: any, index: number) => {
             return (
