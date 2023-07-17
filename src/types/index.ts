@@ -23,7 +23,7 @@ export interface dataProps {
         cloud: number
       }
       air_quality: {
-        'us-epa-index': number,
+        'gb-defra-index': number,
       }
     }
     forecast: {

@@ -35,14 +35,12 @@ export default async function Home({ searchParams }: any) {
   return (
     <main className="container mx-auto px-4 md:px-8 md:flex items-center justify-center min-h-screen">
       <div className="md:flex bg-gray-50 rounded-xl shadow-2xl">
-        {/* Left Column */}
-        <div className="bg-gray-50 md:flex-1 p-6">
+        <div className="bg-gray-50 md:flex-1 p-6 md:rounded-l-2xl">
           <Forms />
           {Content}
         </div>
 
-        {/* Right Column */}
-        <div className="bg-gray-200 p-6">
+        <div className="bg-gray-200 p-6 md:rounded-r-2xl">
           {LeftContent}
         </div>
       </div>
