@@ -65,7 +65,7 @@ export default function LeftCard({ data }: dataProps) {
             return (
               <div key={index} className="flex flex-col text-center w-full bg-gray-50 p-3 rounded-lg shadow">
                 <h1 className="text-lg">{index}:00</h1>
-                <Image src={`http://${hourData.condition.icon}`} height={300} width={300} alt="" />
+                <Image src={`https:${hourData.condition.icon}`} height={300} width={300} alt="" />
                 <p>{hourData.temp_c.toFixed()}°C</p>
               </div>
             );
