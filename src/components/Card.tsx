@@ -37,7 +37,7 @@ export default async function Card({ data }: dataProps) {
             {data.current.condition.text}
           </div>
           <div>
-            <Image src={`https://${data.current.condition.icon}`} width={30} height={30} alt={data.current.condition.icon} />
+            <Image src={`https:${data.current.condition.icon}`} width={30} height={30} alt={data.current.condition.icon} />
           </div>
         </div>
         <div className="flex flex-wrap items-end gap-2">
