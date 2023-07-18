@@ -1,34 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Weather App - README
 
-## Getting Started
+![weather-lyart-rho vercel app__city=london](https://github.com/Lunatic02/weather/assets/82097583/433f6009-bd6c-4f90-b4c0-dff6abbfee69)
 
-First, run the development server:
+## Overview
+This is a weather app developed using Next.js 13 with TypeScript and Tailwind CSS. The app allows users to get real-time weather information for different locations around the world. It provides current weather conditions, temperature, humidity, wind speed, and a 5-day forecast.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+You can access the live version of the app at https://weather-lyart-rho.vercel.app/.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
+<ul>
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+  <li><b>Real-time Weather Information</b>: The app fetches up-to-date weather data from a reliable weather API to provide accurate results.</li>
+  <li><b>Location Search</b>:: Users can search for weather information by typing the name of a city or location. The app will display relevant weather details for the specified location.</li>
+  <li><b>Responsive Design</b>: The app is designed to be responsive and works seamlessly across various devices, including desktops, tablets, and mobile phones</li>
+</ul>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Technologies Used
 
-## Learn More
+<ul>
+  <li>Next.js 13: A powerful and efficient React framework for building server-side rendered (SSR) and static websites.</li>
+  <li>TypeScript: A statically-typed superset of JavaScript that enhances code reliability and scalability.</li>
+  <li>Tailwind CSS: A utility-first CSS framework that enables rapid and easy UI development.</li>
+</ul>
 
-To learn more about Next.js, take a look at the following resources:
+I hope you enjoy using the Weather App! If you have any questions or need assistance, feel free to contact us or open an issue in the repository.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Happy weather checking! 🌦️🌤️
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+
+
